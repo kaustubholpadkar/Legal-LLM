@@ -1,0 +1,654 @@
+{
+    "cuad_unlimited-all-you-can-eat-license": {
+        "summary": "Does the clause grant one party an \u201centerprise,\u201d \u201call you can eat\u201d or unlimited usage license?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Unlimited/All-You-Can-Eat-License\"."
+    },
+    "cuad_governing_law": {
+        "summary": "Does the clause specify which state/country's law governs the contract?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Governing Law\"."
+    },
+    "maud_accuracy_of_fundamental_target_r&ws:_bringdown_standard": {
+        "summary": "Read the following merger agreement and answer: how accurate must the fundamental representations and warranties be according to the bring down provision?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "cuad_no-solicit_of_employees": {
+        "summary": "Does the clause restrict a party\u2019s soliciting or hiring employees and/or contractors from the counterparty, whether during the contract or after the contract ends (or both)?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"No-Solicit Of Employees\"."
+    },
+    "learned_hands_domestic_violence": {
+        "summary": "Classify if a user post implicates legal isssues related to domestic_violence.",
+        "description": "This is a binary classification task in which the model must determine if a user's post discusses dealing with domestic violence and abuse, including getting protective orders, enforcing them, understanding abuse, reporting abuse, and getting resources and status if there is abuse."
+    },
+    "maud_definition_includes_stock_deals": {
+        "summary": "Read the following merger agreement and answer: what qualifies as a superior offer in terms of stock deals?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "privacy_policy_entailment": {
+        "summary": "Determine if a description of a privacy policy clause is correct given that clause.",
+        "description": "This is a binary classification task in which the LLM is provided with a clause from a privacy policy, and a description of that clause (e.g., \"The policy describes collection of the user's HTTP cookies, flash cookies, pixel tags, or similar identifiers by a party to the contract.\"). The LLM must determine if description of the clause is `Correct` or `Incorrect`."
+    },
+    "contract_nli_permissible_acquirement_of_similar_information": {
+        "summary": "Identify if the clause provides that the Receiving Party may acquire information similar to Confidential Information from a third party.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "cuad_irrevocable_or_perpetual_license": {
+        "summary": "Does the clause specify a license grant that is irrevocable or perpetual?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Irrevocable Or Perpetual License\"."
+    },
+    "definition_classification": {
+        "summary": "Extract the term being defined in sentences from Supreme Court opinions.",
+        "description": "Courts frequently define terms in the course of interpreting and applying laws. For instance, the following sentence provides a definition of the term \"confidential\":\n ```text\n The term \u201cconfidential\u201d meant then, as it does now, \u201cprivate\u201d or \u201csecret.\u201d Webster's Seventh New Collegiate Dictionary 174 (1963). And here is a sentence defining \u201cbrought\u201d: But a natural reading of \u00a7 27's text does not extend so far. \u201cBrought\u201d in this context means \u201ccommenced,\u201d Black's Law Dictionary 254 (3d ed. 1933).\n ```\n The goal of this task is to identify if a sentence contains a definition. For example, the following sentence defines \"vacation\":\n ```text\n A vacation is defined by Bouvier to be the period of time between the end of one term and the beginning of another.\n ```"
+    },
+    "cuad_cap_on_liability": {
+        "summary": "Does the clause specify a cap on liability upon the breach of a party\u2019s obligation? This includes time limitation for the counterparty to bring claims or maximum amount for recovery.",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Cap On Liability\"."
+    },
+    "textualism_tool_plain": {
+        "summary": "Determine if a paragraph from a judicial opinion is applying a form textualism that relies on the ordinary (\"plain\") meaning of terms.",
+        "description": "This is a binary classification task in which the LLM must determine if a paragraph interpreting a statute uses the plain or ordinary meaning of the statutory text. In order to recieve a positive label (``Yes''), the paragraph must: \n1. Reference reliance on the use of plain meaning in interpreting the statute. This includes explicit reference or referencing the tools logic. \n2. Provide evidence that the opinion used a plain meaning approach. This includes a) citing it as a general rule of decision guiding the outcome or b) applying it to the facts."
+    },
+    "ssla_plaintiff": {
+        "summary": "Extract the identities of the plaintiffs from excerpts of securities class action complaints.",
+        "description": "This task requires the LLM to extract the identities of plaintiffs from excerpts of securities class action complaints.\n- It may be the case that the excerpt does not provide the identity of the plaintiff. In that case, the LLM should return \"Not named\".\n- There may be multiple plaintiffs. In that case, the LLM should return the identities of all of them.\nLLM outputs should be evaluated by comparing the extracted names to the ground truth. We recommend using `fuzz.partial_ratio` from the [fuzz](https://github.com/seatgeek/thefuzz) library, with a similarity score >= 80 constituting a correct answer (if a plaintiff is mentioned)."
+    },
+    "maud_change_in_law:__subject_to_\"disproportionate_impact\"_modifier": {
+        "summary": "Read the following merger agreement and answer: do changes in law that have disproportionate impact qualify for Material Adverse Effect (MAE)?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "opp115_data_retention": {
+        "summary": "Does the clause describe how long user information is stored?",
+        "description": "This is a binary classification task in which the LLM must answer the following annotation intent for clauses in privacy policies.\n```text\nDoes the clause describe how long user information is stored?\n```"
+    },
+    "corporate_lobbying": {
+        "summary": "Predict if a proposed bill is relevant to a company.",
+        "description": "This task measures LLM ability to predict whether a proposed bill is relevant to a company."
+    },
+    "cuad_affiliate_license-licensee": {
+        "summary": "Does the clause describe a license grant to a licensee (incl. sublicensor) and the affiliates of such licensee/sublicensor?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Affiliate License-Licensee\"."
+    },
+    "supply_chain_disclosure_best_practice_accountability": {
+        "summary": "Does the above statement disclose whether the retail seller or manufacturer maintains internal compliance procedures on company standards regarding human trafficking and slavery? This includes any type of internal accountability mechanism. Requiring independently of the supply to comply with laws does not qualify or asking for documentary evidence of compliance does not count either.",
+        "description": "This is a binary classification task in which the LLM must determine if a supply chain disclosure meets the following coding criteria.\n```text\nDoes the above statement disclose whether the retail seller or manufacturer maintains internal compliance procedures on company standards regarding human trafficking and slavery? This includes any type of internal accountability mechanism. Requiring independently of the supply to comply with laws does not qualify or asking for documentary evidence of compliance does not count either. \n```"
+    },
+    "contract_qa": {
+        "summary": "Answer yes/no questions about whether contractual clauses discuss particular issues.",
+        "description": "This is a binary classification task where the LLM must determine if language from a contract contains a particular type of content. Unlike other contractual clause classification tasks in LegalBench, this task covers multiple distinct types of contant. As the prompt only provides examples of some clauses, the LLM is required to identify clause types for which it in-context demonstrations have not been provided. This task encompasses the following questions:\n- Does the clause describe confidentiality requirements?\n- Does the clause discuss BIPA consent?\n- Does the clause discuss CIPA policy?\n- Does the clause discuss PII data breaches?\n- Does the clause discuss arbitration?\n- Does the clause discuss breach of contract?\n- Does the clause discuss choice of law governing the contract?\n- Does the clause discuss compliance with California consumer privacy law?\n- Does the clause discuss compromised user credentials?\n- Does the clause discuss dispute resolution?\n- Does the clause discuss how disputes may be escalated?\n- Does the clause discuss inadvertent disclosures of personal information?\n- Does the clause discuss personal indemnification?\n- Does the clause discuss the American with Disabilities Act (ADA) compliance?\n- Does the clause waive confidentiality?\n- Does the clause waive damages?\n- Is this a Force Majeure clause?\n- Is this a non-compete clause?\n- Is this a severability clause?\n- Is this a termination clause?"
+    },
+    "international_citizenship_questions": {
+        "summary": "Answer questions about citizenship law from across the world.",
+        "description": "Using the GLOBALCIT citizenship law dataset, we construct questions about citizenship law across the world as Yes or No questions. This is a statutory retrieval and understanding task."
+    },
+    "cuad_volume_restriction": {
+        "summary": "Does the clause specify a fee increase or consent requirement, etc. if one party\u2019s use of the product/services exceeds certain threshold?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Volume Restriction\"."
+    },
+    "cuad_uncapped_liability": {
+        "summary": "Does the clause specify that a party\u2019s liability is uncapped upon the breach of its obligation in the contract? This also includes uncap liability for a particular type of breach such as IP infringement or breach of confidentiality obligation",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Uncapped Liability\"."
+    },
+    "opp115_third_party_sharing_collection": {
+        "summary": "Does the clause describe how user information may be shared with or collected by third parties?.",
+        "description": "This is a binary classification task in which the LLM must answer the following annotation intent for clauses in privacy policies.\n```text\nDoes the clause describe how user information may be shared with or collected by third parties?\n```"
+    },
+    "contract_nli_confidentiality_of_agreement": {
+        "summary": "Identify if the clause provides that the Receiving Party shall not disclose the fact that Agreement was agreed or negotiated.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "contract_nli_sharing_with_employees": {
+        "summary": "Identify if the clause provides that the Receiving Party may share some Confidential Information with some of Receiving Party's employees.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "maud_pandemic_or_other_public_health_event:__subject_to_\"disproportionate_impact\"_modifier": {
+        "summary": "Read the following merger agreement and answer: do pandemics or other public health events have to have disproportionate impact to qualify for Material Adverse Effect (MAE)?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "supply_chain_disclosure_disclosed_certification": {
+        "summary": "Does the above statement disclose to what extent, if any, that the retail seller or manufacturer requires direct suppliers to certify that materials incorporated into the product comply with the laws regarding slavery and human trafficking of the country or countries in which they are doing business?",
+        "description": "This is a binary classification task in which the LLM must determine if a supply chain disclosure meets the following coding criteria.\n```text\nDoes the above statement disclose to what extent, if any, that the retail seller or manufacturer requires direct suppliers to certify that materials incorporated into the product comply with the laws regarding slavery and human trafficking of the country or countries in which they are doing business?\n```"
+    },
+    "cuad_exclusivity": {
+        "summary": "Does the clause specify exclusive dealing commitment with the counterparty? This includes a commitment to procure all \u201crequirements\u201d from one party of certain technology, goods, or services or a prohibition on licensing or selling technology, goods or services to third parties, or a prohibition on collaborating or working with other parties), whether during the contract or after the contract ends (or both).",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Exclusivity\"."
+    },
+    "function_of_decision_section": {
+        "summary": "Classify the function of different sections of legal written opinions.",
+        "description": "Lawyers reading prior court decisions must be able to identify the function that each section of the written decision serves within the context of the whole. Beginning lawyers in law school are taught to do so intentionally and explicitly as they read cases. As lawyers become more experienced over time, the process becomes second nature. This task is to classify a paragraph extracted from a written decision into one of seven possible categories: Facts, Procedural History, Issue, Rule, Analysis, Conclusion, or Decree.\n 1. Facts - The paragraph describes the faction background that led up to the present lawsuit.\n 2. Procedural History - The paragraph describes the course of litigation that led to the current proceeding before the court.\n 3. Issue - The paragraph describes the legal or factual issue that must be resolved by the court.\n 4. Rule - The paragraph describes a rule of law relevant to resolving the issue.\n 5. Analysis - The paragraph analyzes the legal issue by applying the relevant legal principles to the facts of the present dispute.\n 6. Conclusion - The paragraph presents a conclusion of the court.\n 7. Decree - The paragraph constitutes a decree resolving the dispute."
+    },
+    "maud_knowledge_definition": {
+        "summary": "Read the following merger agreement and answer: what counts as Knowledge?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "diversity_1": {
+        "summary": "Diversity jurisdiction exists when there is (1) complete diversity between plaintiffs and defendants, and (2) the amount-in-controversy (AiC) is greater than $75k.",
+        "description": "Diversity jurisdiction is one way in which a federal court may have jurisdiction over claims arising from state law. Diversity jurisdiction exists when there is (1) complete diversity between plaintiffs and defendants, and (2) the amount-in-controversy (AiC) is greater than \\$75k.\n \"Complete diversity\" requires that there is no pair of plaintiff and defendant that are citizens of the same state. However, it is acceptable for multiple plaintiffs to be from the same state, or for multiple defendants to be from the same state. AiC is the amount of damages being sued for. The AiC requirement allows for certain forms of aggregation. Specifically, if plaintiff A asserts two independent claims against defendant B, the value of the claims may be added together when considering if the AiC requirement is met. However, a plaintiff may not aggregate the value of claims against two separate defendants, and two plaintiffs may not aggregate claims against the same defendant."
+    },
+    "overruling": {
+        "summary": "Classify whether a sentence overrules a previous case.",
+        "description": ""
+    },
+    "diversity_6": {
+        "summary": "Diversity jurisdiction exists when there is (1) complete diversity between plaintiffs and defendants, and (2) the amount-in-controversy (AiC) is greater than $75k.",
+        "description": "Diversity jurisdiction is one way in which a federal court may have jurisdiction over claims arising from state law. Diversity jurisdiction exists when there is (1) complete diversity between plaintiffs and defendants, and (2) the amount-in-controversy (AiC) is greater than \\$75k.\n \"Complete diversity\" requires that there is no pair of plaintiff and defendant that are citizens of the same state. However, it is acceptable for multiple plaintiffs to be from the same state, or for multiple defendants to be from the same state. AiC is the amount of damages being sued for. The AiC requirement allows for certain forms of aggregation. Specifically, if plaintiff A asserts two independent claims against defendant B, the value of the claims may be added together when considering if the AiC requirement is met. However, a plaintiff may not aggregate the value of claims against two separate defendants, and two plaintiffs may not aggregate claims against the same defendant."
+    },
+    "maud_cor_permitted_in_response_to_intervening_event": {
+        "summary": "Read the following merger agreement and answer: is Change of Recommendation permitted in response to an intervening event?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "contract_nli_survival_of_obligations": {
+        "summary": "Identify if the clause provides that ome obligations of Agreement may survive termination of Agreement.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "cuad_competitive_restriction_exception": {
+        "summary": "Does the clause mention exceptions or carveouts to Non-Compete, Exclusivity and No-Solicit of Customers?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Competitive Restriction Exception\"."
+    },
+    "cuad_third_party_beneficiary": {
+        "summary": "Does the clause specify that that there a non-contracting party who is a beneficiary to some or all of the clauses in the contract and therefore can enforce its rights against a contracting party?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Third Party Beneficiary\"."
+    },
+    "cuad_non-disparagement": {
+        "summary": "Does the clause require a party not to disparage the counterparty?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Non-Disparagement\"."
+    },
+    "opp115_policy_change": {
+        "summary": "Does the clause describe if and how users will be informed about changes to the privacy policy?.",
+        "description": "This is a binary classification task in which the LLM must answer the following annotation intent for clauses in privacy policies.\n```text\nDoes the clause describe if and how users will be informed about changes to the privacy policy?\n```"
+    },
+    "contract_nli_notice_on_compelled_disclosure": {
+        "summary": "Identify if the clause provides that the Receiving Party shall notify Disclosing Party in case Receiving Party is required by law, regulation or judicial process to disclose any Confidential Information.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "maud_initial_matching_rights_period_(ftr)": {
+        "summary": "Read the following merger agreement and answer: how long is the initial matching rights period in connection with the Fiduciary Termination Right (FTR)?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "cuad_anti-assignment": {
+        "summary": "Does the clause require consent or notice of a party if the contract is assigned to a third party?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Anti-Assignment\"."
+    },
+    "maud_buyer_consent_requirement_(negative_interim_covenant)": {
+        "summary": "Read the following merger agreement and answer: what is the requirement for Buyer consent regarding the negative covenants of interim?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "maud_intervening_event_-_required_to_occur_after_signing_-_answer": {
+        "summary": "Read the following merger agreement and answer: is an \u201cIntervening Event\u201d required to occur after signing?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "jcrew_blocker": {
+        "summary": "Classify if a clause in a loan agreement is a JCrew blocker provision.",
+        "description": "The JCrew Blocker, also known as the JCrew Protection, is a provision included in leveraged loan documents to prevent companies from removing security by transferring intellectual property (IP) into new subsidiaries and raising additional debt. This provision was created after the company J.Crew used a \"back-door\" provision in its credit facility in 2016 to transfer highly valuable IP to an unrestricted subsidiary with the intent of using that IP as collateral for new debt.\nThe JCrew Blocker typically includes the following provisions:\n- A prohibition on the borrower from transferring IP to an unrestricted subsidiary.\n- A requirement that the borrower obtains the consent of its agent/lenders before transferring IP to any subsidiary.\nThe JCrew Blocker is designed to protect lenders from being blindsided by a borrower's attempt to remove material assets from the collateral pool.\nThe JCrew Blocker has been widely adopted by lenders in the leveraged loan market. It is an important tool for protecting lenders from borrowers who may try to game the system."
+    },
+    "opp115_do_not_track": {
+        "summary": "Does the clause describe if and how Do Not Track signals for online tracking and advertising are honored?.",
+        "description": "This is a binary classification task in which the LLM must answer the following annotation intent for clauses in privacy policies.\n```text\nDoes the clause describe if and how Do Not Track signals for online tracking and advertising are honored?\n```"
+    },
+    "cuad_audit_rights": {
+        "summary": "Does the clause give a party the right to audit the books, records, or physical locations of the counterparty to ensure compliance with the contract?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Audit Rights\"."
+    },
+    "maud_application_of_buyer_consent_requirement_(negative_interim_covenant)": {
+        "summary": "Read the following merger agreement and answer: what negative covenants does the requirement of Buyer consent apply to?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "learned_hands_consumer": {
+        "summary": "Classify if a user post implicates legal isssues related to consumer.",
+        "description": "This is a binary classification task in which the model must determine if a user's post discusses issues people face regarding money, insurance, consumer goods and contracts, taxes, and small claims about quality of service."
+    },
+    "contract_nli_limited_use": {
+        "summary": "Identify if the clause provides that the Receiving Party shall not use any Confidential Information for any purpose other than the purposes stated in Agreement.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "supply_chain_disclosure_disclosed_verification": {
+        "summary": "Does the above statement disclose to what extent, if any, that the retail seller or manufacturer engages in verification of product supply chains to evaluate and address risks of human trafficking and slavery? If the company conducts verification], the disclosure shall specify if the verification was not conducted by a third party.",
+        "description": "This is a binary classification task in which the LLM must determine if a supply chain disclosure meets the following coding criteria.\n```text\nDoes the above statement disclose to what extent, if any, that the retail seller or manufacturer engages in verification of product supply chains to evaluate and address risks of human trafficking and slavery? If the company conducts verification], the disclosure shall specify if the verification was not conducted by a third party.\n```"
+    },
+    "cuad_covenant_not_to_sue": {
+        "summary": "Is a party restricted from contesting the validity of the counterparty\u2019s ownership of intellectual property or otherwise bringing a claim against the counterparty for matters unrelated to the contract?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Covenant Not To Sue\"."
+    },
+    "cuad_most_favored_nation": {
+        "summary": "Does the clause state that if a third party gets better terms on the licensing or sale of technology/goods/services described in the contract, the buyer of such technology/goods/services under the contract shall be entitled to those better terms?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Most Favored Nation\"."
+    },
+    "telemarketing_sales_rule": {
+        "summary": "Determine how 16 C.F.R. \u00a7 310.3(a)(1) and 16 C.F.R. \u00a7 310.3(a)(2) (governing deceptive practices) apply to different fact patterns.",
+        "description": "The Telemarketing Sales Rule (16 C.F.R. Part 310) is a set of regulations promulgated by the Federal Trade Commission to implement the Telemarketing and Consumer Fraud and Abuse Prevention Act. Its purpose is to protect consumers from specified deceptive and abusive telemarketing practices. This task focuses on 16 C.F.R. \u00a7 310.3(a)(1) and 16 C.F.R. \u00a7 310.3(a)(2), which outline a series of specific telemarketing practices prohibited as \"deceptive.\" 16 C.F.R. \u00a7 310.3(a)(1) lists information that must be disclosed to a consumer before a sale is made, and 16 C.F.R. \u00a7 310.3(a)(2) lists categories of information that a telemarketer is prohibited from misrepresenting. 16 C.F.R. \u00a7 310.2 provides definitions relevant to both of these subsections."
+    },
+    "ssla_company_defendants": {
+        "summary": "Extract the identities of the company defendants from excerpts of securities class action complaints.",
+        "description": "This task requires the LLM to extract the identities of company defendants from excerpts of securities class action complaints.\nLLM outputs should be evaluated by comparing the extracted names to the ground truth. We recommend using `fuzz.partial_ratio` from the [fuzz](https://github.com/seatgeek/thefuzz) library, with a similarity score >= 80 constituting a correct answer (if a plaintiff is mentioned)."
+    },
+    "maud_general_economic_and_financial_conditions:_subject_to_\"disproportionate_impact\"_modifier": {
+        "summary": "Read the following merger agreement and answer: do changes caused by general economic and financial conditions that have disproportionate impact qualify for Material Adverse Effect (MAE)?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "contract_nli_sharing_with_third-parties": {
+        "summary": "Identify if the clause provides that the Receiving Party may share some Confidential Information with some third-parties (including consultants, agents and professional advisors).",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "learned_hands_education": {
+        "summary": "Classify if a user post implicates legal isssues related to education.",
+        "description": "This is a binary classification task in which the model must determine if a user's post discusses issues around school, including accommodations for special needs, discrimination, student debt, discipline, and other issues in education."
+    },
+    "maud_ordinary_course_efforts_standard": {
+        "summary": "Read the following merger agreement and answer: what is the efforts standard?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "contract_nli_no_licensing": {
+        "summary": "Identify if the clause provides that the Agreement shall not grant Receiving Party any right to Confidential Information.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "maud_accuracy_of_target_\"general\"_r&w:_bringdown_timing_answer": {
+        "summary": "Read the following merger agreement and answer: when are representations and warranties required to be made according to the bring down provision?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "learned_hands_family": {
+        "summary": "Classify if a user post implicates legal isssues related to family.",
+        "description": "This is a binary classification task in which the model must determine if a user's post discusses issues that arise within a family, like divorce, adoption, name change, guardianship, domestic violence, child custody, and other issues."
+    },
+    "learned_hands_benefits": {
+        "summary": "Classify if a user post implicates legal isssues related to benefits.",
+        "description": "This is a binary classification task in which the model must determine if a user's legal post discusses public benefits and social services that people can get from the government, like for food, disability, old age, housing, medical help, unemployment, child care, or other social needs?"
+    },
+    "maud_definition_contains_knowledge_requirement_-_answer": {
+        "summary": "Read the following merger agreement and answer: what is the knowledge requirement in the definition of \u201cIntervening Event\u201d?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "rule_qa": {
+        "summary": "Answer questions about federal and state law.",
+        "description": "Rule QA is a question-answer task in which the model is asked about laws. Questions span asking the model to state the formulations for different legal rules (e.g., the rule for hearsay), identify where laws are codified, and general questions about doctrine."
+    },
+    "learned_hands_health": {
+        "summary": "Classify if a user post implicates legal isssues related to health.",
+        "description": "This is a binary classification task in which the model must determine if a user's post discusses issues with accessing health services, paying for medical care, getting public benefits for health care, protecting one's rights in medical settings, and other issues related to health."
+    },
+    "contract_nli_explicit_identification": {
+        "summary": "Identify if the clause provides that all Confidential Information shall be expressly identified by the Disclosing Party.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "contract_nli_permissible_copy": {
+        "summary": "Identify if the clause provides that the Receiving Party may create a copy of some Confidential Information in some circumstances.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "cuad_price_restrictions": {
+        "summary": "Does the clause place a restriction on the ability of a party to raise or reduce prices of technology, goods, or services provided?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Price Restrictions\"."
+    },
+    "maud_changes_in_gaap_or_other_accounting_principles:__subject_to_\"disproportionate_impact\"_modifier": {
+        "summary": "Read the following merger agreement and answer: do changes in GAAP or other accounting principles that have disproportionate impact qualify for Material Adverse Effect (MAE)?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "opp115_data_security": {
+        "summary": "Does the clause describe how user information is protected?.",
+        "description": "This is a binary classification task in which the LLM must answer the following annotation intent for clauses in privacy policies.\n```text\nDoes the clause describe how user information is protected?\n```"
+    },
+    "maud_type_of_consideration": {
+        "summary": "Read the following merger agreement and answer: what type of consideration is specified in this agreement?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "maud_cor_standard_(superior_offer)": {
+        "summary": "Read the following merger agreement and answer: what standard should the board follow when determining whether to change its recommendation in connection with a superior offer?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "opp115_first_party_collection_use": {
+        "summary": "Does the clause describe how and why a service provider collects user information?.",
+        "description": "This is a binary classification task in which the LLM must answer the following annotation intent for clauses in privacy policies.\n```text\nDoes the clause describe how and why a service provider collects user information?\n```"
+    },
+    "maud_buyer_consent_requirement_(ordinary_course)": {
+        "summary": "Read the following merger agreement and answer: in case the Buyer\u2019s consent for the acquired company\u2019s ordinary business operations is required, are there any limitations on the Buyer\u2019s right to condition, withhold, or delay their consent?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "cuad_source_code_escrow": {
+        "summary": "Does the clause require one party to deposit its source code into escrow with a third party, which can be released to the counterparty upon the occurrence of certain events (bankruptcy, insolvency, etc.)?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Source Code Escrow\"."
+    },
+    "supply_chain_disclosure_best_practice_training": {
+        "summary": "Does the above statement disclose whether the retail seller or manufacturer  provides training to employees on human trafficking and slavery? Broad policies such as ongoing dialogue on mitigating risks of human trafficking and slavery or increasing managers and purchasers knowledge about health, safety and labor practices qualify as training. Providing training to contractors who failed to comply with human trafficking laws counts as training.",
+        "description": "This is a binary classification task in which the LLM must determine if a supply chain disclosure meets the following coding criteria.\n```text\nDoes the above statement disclose whether the retail seller or manufacturer  provides training to employees on human trafficking and slavery? Broad policies such as ongoing dialogue on mitigating risks of human trafficking and slavery or increasing managers and purchasers knowledge about health, safety and labor practices qualify as training. Providing training to contractors who failed to comply with human trafficking laws counts as training. \n```"
+    },
+    "maud_definition_includes_asset_deals": {
+        "summary": "Read the following merger agreement and answer: what qualifies as a superior offer in terms of asset deals?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "nys_judicial_ethics": {
+        "summary": "Answer questions on judicial ethics from the New York State Unified Court System Advisory Committee.",
+        "description": "The New York State Unified Court System Advisory Committee posts rulings on real ethical scenarios. These have been reformulated into Yes/No questions for judicial ethics to understand whether models understand ethical rules and how they might apply to different judicial situations."
+    },
+    "maud_initial_matching_rights_period_(cor)": {
+        "summary": "Read the following merger agreement and answer: how long is the initial matching rights period in case the board changes its recommendation?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "privacy_policy_qa": {
+        "summary": "Determine if a clause in a privacy policy contains the answer to a given question.",
+        "description": "This is a binary classification task in which the LLM is provided with a question (e.g., \"do you publish my data\") and a clause from a privacy policy. The LLM must determine if the clause contains an answer to the question, and classify the question-clause pair as `Relevant` or `Irrelevant`."
+    },
+    "consumer_contracts_qa": {
+        "summary": "Answer yes/no questions pertaining to the rights and obligations created by clauses in terms of services agreements.",
+        "description": "The task consists of 400 yes/no questions relating to consumer contracts (specifically, online terms of service) - and is relevant to the legal skill of contract interpretation."
+    },
+    "cuad_expiration_date": {
+        "summary": "Does the clause specify the date upon which the initial term expires?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Expiration Date\"."
+    },
+    "cuad_liquidated_damages": {
+        "summary": "Does the clause award either party liquidated damages for breach or a fee upon the termination of a contract (termination fee)?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Liquidated Damages\"."
+    },
+    "opp115_user_access,_edit_and_deletion": {
+        "summary": "Does the clause describe if and how users may access, edit, or delete their information?.",
+        "description": "This is a binary classification task in which the LLM must answer the following annotation intent for clauses in privacy policies.\n```text\nDoes the clause describe if and how users may access, edit, or delete their information?\n```"
+    },
+    "maud_fls_(mae)_standard": {
+        "summary": "Read the following merger agreement and answer: what is the Forward Looking Standard (FLS) with respect to Material Adverse Effect (MAE)?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "sara_numeric": {
+        "summary": "Answer the following questions.",
+        "description": "The StAtutory Reasoning Assessment (SARA) dataset tests the ability to reason about summaries of facts and statutes, in the context of US federal tax law. SARA contains a set of statutes, and summaries of facts (cases) paired with a question or an entailment prompt. An entailment prompt asks about a specific section of the SARA statutes. A question asks how much tax one of the protagonists in the case owes."
+    },
+    "maud_cor_standard_(intervening_event)": {
+        "summary": "Read the following merger agreement and answer: what standard should the board follow when determining whether to change its recommendation in response to an intervening event?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "maud_pandemic_or_other_public_health_event:_specific_reference_to_pandemic-related_governmental_responses_or_measures": {
+        "summary": "Read the following merger agreement and answer: is there specific reference to pandemic-related governmental responses or measures in the clause that qualifies pandemics or other public health events for Material Adverse Effect (MAE)?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "learned_hands_torts": {
+        "summary": "Classify if a user post implicates legal isssues related to torts.",
+        "description": "This is a binary classification task in which the model must determine if a user's legal question discusses problems that one person has with another person (or animal), like when there is a car accident, a dog bite, bullying or possible harassment, or neighbors treating each other badly."
+    },
+    "cuad_affiliate_license-licensor": {
+        "summary": "Does the clause describe a license grant by affiliates of the licensor or that includes intellectual property of affiliates of the licensor?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Affiliate License-Licensor\"."
+    },
+    "abercrombie": {
+        "summary": "Determine the correct Abercrombie classification for a mark/product pair.",
+        "description": "A particular mark (e.g. a name for a product or service) is only eligible for trademark protection if it is considered to be \\textit{distinctive}~\\todocite. In assessing whether a mark is distinctive, lawyers and judges follow the framework set out in the case *Abercrombie & Fitch Co. v. Hunting World, Inc.*, which enumerates 5 categories of distinctiveness. These categories characterize the relationship between the dictionary definition of the term used in the mark, and the service or product it is being attached to.\n - **Generic**: Generic terms are those which connote the basic nature of articles or services, rather than the more individualized characteristics of a product.\n - **Descriptive**: Descriptive terms identify a characteristic or quality of an article or service, such as color, odor, function, dimensions, or ingredients.\n - **Suggestive**: A suggestive term suggests, rather than describes, some particular characteristic of the goods or services to which it applies. It requires to consumer to exercise the imagination in order to draw a conclusion as to the nature of the goods and services.\n - **Arbitrary**: Arbitrary terms are those that are real words, but arbitrary with respect to the product.\n - **Fanciful**: Fanciful terms are those that are entirely made up, and not found in the English dictionary."
+    },
+    "cuad_non-transferable_license": {
+        "summary": "Does the clause limit the ability of a party to transfer the license being granted to a third party?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Non-Transferable License\"."
+    },
+    "cuad_rofr-rofo-rofn": {
+        "summary": "Does the clause grant one party a right of first refusal, right of first offer or right of first negotiation to purchase, license, market, or distribute equity interest, technology, assets, products or services?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Rofr/Rofo/Rofn\"."
+    },
+    "learned_hands_crime": {
+        "summary": "Classify if a user post implicates legal isssues related to crime.",
+        "description": "This is a binary classification task in which the model must determine if a user's post discusses issues in the criminal system including when people are charged with crimes, go to a criminal trial, go to prison, or are a victim of a crime."
+    },
+    "ucc_v_common_law": {
+        "summary": "Determine if a contract is governed by the Uniform Commercial Code (UCC) or the common law of contracts.",
+        "description": "The purpose of this task is to determine whether a contract is governed by the Uniform Commercial Code (UCC) or the common law of contracts. The UCC (through Article 2) governs the sale of goods, which are defined as moveable tangible things (cars, apples, books, etc.), whereas the common law governs contracts for real estate and services.\n Some contracts contain both goods and services, such as a contract for the purchase of a car which also includes a year of free maintenance. For simplicity, this task ignores the existence of these \"mixed purpose\" contracts."
+    },
+    "textualism_tool_dictionaries": {
+        "summary": "Determine if a paragraph from a judicial opinion is applying a form textualism that relies on the dictionary meaning of terms.",
+        "description": "This is a binary classification task in which the LLM must determine if a paragraph interpreting a statute uses a dictionary, such as Websters Dictionary or Black Law\u2019s Legal Dictionary. In order to recieve a positive label (``Yes''), the paragraph must: \n1. Reference reliance on the use of a dictionary in interpreting the statute. This includes explicit reference or referencing the tools logic. \n2. Provide evidence that the opinion used a dictionary. This includes a) citing it as a general rule of decision guiding the outcome or b) applying it to the facts."
+    },
+    "supply_chain_disclosure_best_practice_certification": {
+        "summary": "Does the above statement disclose whether the retail seller or manufacturer requires direct suppliers to certify that they comply with labor and anti-trafficking laws?",
+        "description": "This is a binary classification task in which the LLM must determine if a supply chain disclosure meets the following coding criteria.\n```text\nDoes the above statement disclose whether the retail seller or manufacturer requires direct suppliers to certify that they comply with labor and anti-trafficking laws?\n```"
+    },
+    "learned_hands_estates": {
+        "summary": "Classify if a user post implicates legal isssues related to estates.",
+        "description": "This is a binary classification task in which the model must determine if a user's post discusses planning for end-of-life, possible incapacitation, and other special circumstances that would prevent a person from making decisions about their own well-being, finances, and property. This includes issues around wills, powers of attorney, advance directives, trusts, guardianships, conservatorships, and other estate issues that people and families deal with."
+    },
+    "cuad_minimum_commitment": {
+        "summary": "Does the clause specify a minimum order size or minimum amount or units pertime period that one party must buy from the counterparty?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Minimum Commitment\"."
+    },
+    "maud_\"ability_to_consummate\"_concept_is_subject_to_mae_carveouts": {
+        "summary": "Read the following merger agreement and answer: is the \u201cability to consummate\u201d concept subject to Material Adverse Effect (MAE) carveouts?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "proa": {
+        "summary": "Classify if a statute contains a private right of action.",
+        "description": "A private right of action (PROA) exists when a statute empowers an ordinary individual (i.e., a private person) to legally enforce their rights by bringing an action in court. In short, a PROA creates the ability for an individual to sue someone in order to recover damages or halt some offending conduct. PROAs are ubiquitous in antitrust law (in which individuals harmed by anti-competitive behavior can sue offending firms for compensation) and environmental law (in which individuals can sue entities which release hazardous substances for damages)."
+    },
+    "cuad_post-termination_services": {
+        "summary": "Does the clause subject a party to obligations after the termination or expiration of a contract, including any post-termination transition, payment, transfer of IP, wind-down, last-buy, or similar commitments?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Post-Termination Services\"."
+    },
+    "diversity_5": {
+        "summary": "Diversity jurisdiction exists when there is (1) complete diversity between plaintiffs and defendants, and (2) the amount-in-controversy (AiC) is greater than $75k.",
+        "description": "Diversity jurisdiction is one way in which a federal court may have jurisdiction over claims arising from state law. Diversity jurisdiction exists when there is (1) complete diversity between plaintiffs and defendants, and (2) the amount-in-controversy (AiC) is greater than \\$75k.\n \"Complete diversity\" requires that there is no pair of plaintiff and defendant that are citizens of the same state. However, it is acceptable for multiple plaintiffs to be from the same state, or for multiple defendants to be from the same state. AiC is the amount of damages being sued for. The AiC requirement allows for certain forms of aggregation. Specifically, if plaintiff A asserts two independent claims against defendant B, the value of the claims may be added together when considering if the AiC requirement is met. However, a plaintiff may not aggregate the value of claims against two separate defendants, and two plaintiffs may not aggregate claims against the same defendant."
+    },
+    "diversity_2": {
+        "summary": "Diversity jurisdiction exists when there is (1) complete diversity between plaintiffs and defendants, and (2) the amount-in-controversy (AiC) is greater than $75k.",
+        "description": "Diversity jurisdiction is one way in which a federal court may have jurisdiction over claims arising from state law. Diversity jurisdiction exists when there is (1) complete diversity between plaintiffs and defendants, and (2) the amount-in-controversy (AiC) is greater than \\$75k.\n \"Complete diversity\" requires that there is no pair of plaintiff and defendant that are citizens of the same state. However, it is acceptable for multiple plaintiffs to be from the same state, or for multiple defendants to be from the same state. AiC is the amount of damages being sued for. The AiC requirement allows for certain forms of aggregation. Specifically, if plaintiff A asserts two independent claims against defendant B, the value of the claims may be added together when considering if the AiC requirement is met. However, a plaintiff may not aggregate the value of claims against two separate defendants, and two plaintiffs may not aggregate claims against the same defendant."
+    },
+    "maud_relational_language_(mae)_applies_to": {
+        "summary": "Read the following merger agreement and answer: what carveouts pertaining to Material Adverse Effect (MAE) does the relational language apply to?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "learned_hands_employment": {
+        "summary": "Classify if a user post implicates legal isssues related to employment.",
+        "description": "This is a binary classification task in which the model must determine if a user's post discusses issues related to working at a job, including discrimination and harassment, worker's compensation, workers rights, unions, getting paid, pensions, being fired, and more."
+    },
+    "cuad_change_of_control": {
+        "summary": "Does the clause give one party the right to terminate or is consent or notice required of the counterparty if such party undergoes a change of control, such as a merger, stock sale, transfer of all or substantially all of its assets or business, or assignment by operation of law?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Change Of Control\"."
+    },
+    "cuad_revenue-profit_sharing": {
+        "summary": "Does the clause require a party to share revenue or profit with the counterparty for any technology, goods, or services?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Revenue/Profit Sharing\"."
+    },
+    "maud_\"financial_point_of_view\"_is_the_sole_consideration": {
+        "summary": "Read the following merger agreement and answer: is \u201cfinancial point of view\u201d the sole consideration when determining whether an offer is superior?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "citation_prediction_open": {
+        "summary": "Predict the case (by name) that best supports the provided sentence.",
+        "description": "This task evaluates the extent to which a LLM can provide the \"best\" case which supports a sentence as a citation. Here, \"best\" is defined as the citation a federal court elected to use for the associated sentence."
+    },
+    "maud_cor_permitted_with_board_fiduciary_determination_only": {
+        "summary": "Read the following merger agreement and answer: is Change of Recommendation permitted as long as the board determines that such change is required to fulfill its fiduciary obligations?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "maud_additional_matching_rights_period_for_modifications_(cor)": {
+        "summary": "Read the following merger agreement and answer: how long is the additional matching rights period for modifications in case the board changes its recommendation?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "diversity_3": {
+        "summary": "Diversity jurisdiction exists when there is (1) complete diversity between plaintiffs and defendants, and (2) the amount-in-controversy (AiC) is greater than $75k.",
+        "description": "Diversity jurisdiction is one way in which a federal court may have jurisdiction over claims arising from state law. Diversity jurisdiction exists when there is (1) complete diversity between plaintiffs and defendants, and (2) the amount-in-controversy (AiC) is greater than \\$75k.\n \"Complete diversity\" requires that there is no pair of plaintiff and defendant that are citizens of the same state. However, it is acceptable for multiple plaintiffs to be from the same state, or for multiple defendants to be from the same state. AiC is the amount of damages being sued for. The AiC requirement allows for certain forms of aggregation. Specifically, if plaintiff A asserts two independent claims against defendant B, the value of the claims may be added together when considering if the AiC requirement is met. However, a plaintiff may not aggregate the value of claims against two separate defendants, and two plaintiffs may not aggregate claims against the same defendant."
+    },
+    "diversity_4": {
+        "summary": "Diversity jurisdiction exists when there is (1) complete diversity between plaintiffs and defendants, and (2) the amount-in-controversy (AiC) is greater than $75k.",
+        "description": "Diversity jurisdiction is one way in which a federal court may have jurisdiction over claims arising from state law. Diversity jurisdiction exists when there is (1) complete diversity between plaintiffs and defendants, and (2) the amount-in-controversy (AiC) is greater than \\$75k.\n \"Complete diversity\" requires that there is no pair of plaintiff and defendant that are citizens of the same state. However, it is acceptable for multiple plaintiffs to be from the same state, or for multiple defendants to be from the same state. AiC is the amount of damages being sued for. The AiC requirement allows for certain forms of aggregation. Specifically, if plaintiff A asserts two independent claims against defendant B, the value of the claims may be added together when considering if the AiC requirement is met. However, a plaintiff may not aggregate the value of claims against two separate defendants, and two plaintiffs may not aggregate claims against the same defendant."
+    },
+    "contract_nli_permissible_post-agreement_possession": {
+        "summary": "Identify if the clause provides that the Receiving Party may retain some Confidential Information even after the return or destruction of Confidential Information.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "hearsay": {
+        "summary": "Classify if a particular piece of evidence would be barred as hearsay.",
+        "description": ""
+    },
+    "scalr": {
+        "summary": "Identify the holding statement that best answers a particular legal question.",
+        "description": ""
+    },
+    "learned_hands_immigration": {
+        "summary": "Classify if a user post implicates legal isssues related to immigration.",
+        "description": "This is a binary classification task in which the model must determine if a user's post discusses visas, asylum, green cards, citizenship, migrant work and benefits, and other issues faced by people who are not full citizens in the US."
+    },
+    "cuad_license_grant": {
+        "summary": "Does the clause contain a license granted by one party to its counterparty?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"License Grant\"."
+    },
+    "maud_fiduciary_exception:_board_determination_trigger_(no_shop)": {
+        "summary": "Read the following merger agreement and answer: what type of offer could the Board take actions on notwithstanding the no-shop provision?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "legal_reasoning_causality": {
+        "summary": "Classify whether a district court opinion relies on statistical evidence in its reasoning.",
+        "description": "Large datasets of court opinions are typically limited to identifying and coding technical information, such as the names of the parties and the judge(s), and sometimes the outcome and the legal topics of the case. However, the most important part of any judicial opinion, the legal reasoning, is typically treated as a black box in empirical legal scholarship. This task begins to address this shortcoming. It focuses on the way that judges provide legal reasoning for the finding of causality (specifically, in labor discrimination cases), and labels the text based on the question of whether the judge/s, in their written reasoning, relied on statistical evidence (e.g., regression analysis) or direct evidence (e.g., witnesses' testimonies) when determining the legal question of whether there was a causal link between the plaintiff's characteristics (e.g., gender, race) and the contested decision (to hire them, set a certain wage, etc.)."
+    },
+    "learned_hands_traffic": {
+        "summary": "Classify if a user post implicates legal isssues related to traffic.",
+        "description": "This is a binary classification task in which the model must determine if a user's legal post discusses problems with traffic and parking tickets, fees, driver's licenses, and other issues experienced with the traffic system. It also concerns issues with car accidents and injuries, cars' quality, repairs, purchases, and other contracts."
+    },
+    "insurance_policy_interpretation": {
+        "summary": "Read the insurance policy and the insurance claim. Answer whether the claim is covered under the policy.",
+        "description": "This is a multiple-choice task in which the model must answer whether an insurance claim is covered under a certain policy, or if the coverage is ambiguous."
+    },
+    "supply_chain_disclosure_disclosed_training": {
+        "summary": "Does the above statement disclose to what extent, if any, that the retail seller or manufacturer provides company employees and management, who have direct responsibility for supply chain management, training on human trafficking and slavery, particularly with respect to mitigating risks within the supply chains of products?",
+        "description": "This is a binary classification task in which the LLM must determine if a supply chain disclosure meets the following coding criteria.\n```text\nDoes the above statement disclose to what extent, if any, that the retail seller or manufacturer provides company employees and management, who have direct responsibility for supply chain management, training on human trafficking and slavery, particularly with respect to mitigating risks within the supply chains of products?\n```"
+    },
+    "oral_argument_question_purpose": {
+        "summary": "Classify the purpose of a question asked during oral argument.",
+        "description": "This task classifies questions asked by Supreme Court justices at oral argument into seven categories:\n1. Background - questions seeking factual or procedural information that is missing or not clear in the briefing\n2. Clarification - questions seeking to get an advocate to clarify her position or the scope of the rule being advocated for\n3. Implications - questions about the limits of a rule or its implications for future cases\n4. Support - questions offering support for the advocate's position\n5. Criticism - questions criticizing an advocate's position\n6. Communicate - question designed primarily to communicate with other justices\n7. Humor - questions designed to interject humor into the argument and relieve tension"
+    },
+    "maud_accuracy_of_target_capitalization_r&w_(outstanding_shares):_bringdown_standard_answer": {
+        "summary": "Read the following merger agreement and answer: how accurate must the capitalization representations and warranties be according to the bring down provision?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "cuad_notice_period_to_terminate_renewal": {
+        "summary": "Does the clause specify a notice period required to terminate renewal?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Notice Period To Terminate Renewal\"."
+    },
+    "opp115_international_and_specific_audiences": {
+        "summary": "Does the clause describe practices that pertain only to a specific group of users (e.g., children, Europeans, or California residents)?.",
+        "description": "This is a binary classification task in which the LLM must answer the following annotation intent for clauses in privacy policies.\n```text\nDoes the clause describe practices that pertain only to a specific group of users (e.g., children, Europeans, or California residents)?\n```"
+    },
+    "maud_specific_performance": {
+        "summary": "Read the following merger agreement and answer: what is the wording of the Specific Performance clause regarding the parties\u2019 entitlement in the event of a contractual breach?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "cuad_effective_date": {
+        "summary": "Does the clause specify the date upon which the agreement becomes effective?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Effective Date\"."
+    },
+    "successor_liability": {
+        "summary": "Identify the type of successor liability in a fact pattern",
+        "description": "When one company sells its assets to another company, the purchaser is generally not liable for the seller\u2019s debts and liabilities. Successor liability is a common law exception to this general rule. In order to spot a successor liability issue, lawyers must understand how courts apply the doctrine.\n The doctrine holds purchasers of all, or substantially all, of a seller\u2019s assets liable for the debts and liabilities of the seller if:\n 1. the purchaser expressly agrees to be held liable;\n 2. the assets are fraudulently conveyed to the purchaser in order to avoid liability;\n 3. there is a de facto merger between the purchaser and seller; or\n 4. the purchaser is a mere continuation of the seller.\n Express agreement is governed by standard contract law rules. In practice, if a purchase agreement contains a provision to assume liabilities, litigation will rarely arise. Courts, however, sometimes interpret express agreement in the absence of a written provision. \n Assets are fraudulently conveyed when the seller intends to escape liability through an asset sale or knows that liability will be avoided through an asset sale.\n De facto merger is a multifactor test that consists of (1) continuity of ownership; (2) cessation of ordinary business and dissolution of the acquired corporation as soon as possible; (3) assumption by the purchaser of the liabilities ordinarily necessary for the uninterrupted continuation of the business of the acquired corporation; and (4) continuity of management, personnel, physical location, assets, and general business operation. Some jurisdictions require a showing of all four elements. Others do not and simply emphasize that the substance of the asset sale is one of a merger, regardless of its form.\n Mere continuation requires a showing that after the asset sale, only one corporation remains and there is an overlap of stock, stockholders, and directors between the two corporations. There are two variations of the mere continuation exception. The first is the \u201ccontinuity of enterprise\u201d exception. In order to find continuity of enterprise, and thus liability for the purchaser of assets, courts engage in a multifactor analysis. Factors include: (1) retention of the same employees; (2) retention of the same supervisory personnel; (3) retention of the same production facilities in the same physical location; (4) production of the same product; (5) retention of the same name; (6) continuity of assets; (7) continuity of general business operations; and (8) whether the successor holds itself out as the continuation of the previous enterprise. The second is the product line exception. This exception imposes liability on asset purchasers who continue manufacturing products of a seller\u2019s product line. This exception generally requires that defendants show that the purchaser of assets is able to assume the risk-spreading role of the original manufacturer, and that imposing liability is fair because the purchaser enjoys the continued goodwill of the original manufacturer."
+    },
+    "learned_hands_courts": {
+        "summary": "Classify if a user post implicates legal isssues related to courts.",
+        "description": "This is a binary classification task in which the model must determine if a user's post discusses the logistics of how a person can interact with a lawyer or the court system. It applies to situations about procedure, rules, how to file lawsuits, how to hire lawyers, how to represent oneself, and other practical matters about dealing with these systems."
+    },
+    "definition_extraction": {
+        "summary": "Extract the term being defined in sentences from Supreme Court opinions.",
+        "description": "Courts frequently define terms in the course of interpreting and applying laws. For instance, the following sentence provides a definition of the term \"confidential\":\n ```text\n The term \u201cconfidential\u201d meant then, as it does now, \u201cprivate\u201d or \u201csecret.\u201d Webster's Seventh New Collegiate Dictionary 174 (1963). And here is a sentence defining \u201cbrought\u201d: But a natural reading of \u00a7 27's text does not extend so far. \u201cBrought\u201d in this context means \u201ccommenced,\u201d Black's Law Dictionary 254 (3d ed. 1933).\n ```\n The goal of this task is to identify, from a sentence defining a term, the term that is being defined. A challenge is that defining sentences may not explicitly use quotations to denote the term being defined. For example, the following sentence defines \"vacation\":\n ```text\n A vacation is defined by Bouvier to be the period of time between the end of one term and the beginning of another.\n ```"
+    },
+    "learned_hands_business": {
+        "summary": "Classify if a user post implicates legal isssues related to business.",
+        "description": "This is a binary classification task in which the model must determine if a user's legal question discusses issues faced by people who run small businesses or nonprofits, including around incorporation, licenses, taxes, regulations, and other concerns. It also includes options when there are disasters, bankruptcies, or other problems"
+    },
+    "canada_tax_court_outcomes": {
+        "summary": "Classify whether an excerpt from a Canada Tax Court decision includes the outcome of the appeal, and if so, to specify whether the appeal was allowed or dismissed",
+        "description": "The input is an excerpt of text from Tax Court of Canada decisions involving appeals of tax related matters. The task is to classify whether the excerpt includes the outcome of the appeal, and if so, to specify whether the appeal was allowed or dismissed. Partial success (e.g. appeal granted on one tax year but dismissed on another) counts as allowed (with the exception of costs orders which are disregarded). Where the excerpt does not clearly articulate an outcome, the system should indicate other as the outcome. Categorizing case outcomes is a common task that legal researchers complete in order to gather datasets involving outcomes in legal processes for the purposes of quantitative empirical legal research."
+    },
+    "contract_nli_inclusion_of_verbally_conveyed_information": {
+        "summary": "Identify if the clause provides that Confidential Information may include verbally conveyed information.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "maud_tail_period_length": {
+        "summary": "Read the following merger agreement and answer: how long is the Tail Period?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "learned_hands_housing": {
+        "summary": "Classify if a user post implicates legal isssues related to housing.",
+        "description": "This is a binary classification task in which the model must determine if a user's post discusses issues with paying your rent or mortgage, landlord-tenant issues, housing subsidies and public housing, eviction, and other problems with your apartment, mobile home, or house."
+    },
+    "opp115_user_choice_control": {
+        "summary": "Does the clause describe the choices and control options available to users?.",
+        "description": "This is a binary classification task in which the LLM must answer the following annotation intent for clauses in privacy policies.\n```text\nDoes the clause describe the choices and control options available to users?\n```"
+    },
+    "supply_chain_disclosure_best_practice_audits": {
+        "summary": "Does the above statement disclose whether the retail seller or manufacturer  performs any type of audit, or reserves the right to audit?",
+        "description": "This is a binary classification task in which the LLM must determine if a supply chain disclosure meets the following coding criteria.\n```text\nDoes the above statement disclose whether the retail seller or manufacturer  performs any type of audit, or reserves the right to audit?\n```"
+    },
+    "unfair_tos": {
+        "summary": "Classify if a terms-of-service clause is unfair.",
+        "description": "The purpose of this task is classifying clauses in Terms of Service agreements. Clauses have been annotated by into nine categories: `['Arbitration', 'Unilateral change', 'Content removal', 'Jurisdiction', 'Choice of law', 'Limitation of liability', 'Unilateral termination', 'Contract by using', 'Other']`. The first eight categories correspond to clauses that would potentially be deemed *potentially unfair*. The last category (`Other`) corresponds to clauses in agreements which don't fit into these categories. A description of the precise annotation guidelines can be found in the original paper."
+    },
+    "cuad_joint_ip_ownership": {
+        "summary": "Does the clause provide for joint or shared ownership of intellectual property between the parties to the contract?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Joint Ip Ownership\"."
+    },
+    "personal_jurisdiction": {
+        "summary": "Classify if a set of facts give rise to personal jurisdiction.",
+        "description": "Personal jurisdiction refers to the ability of a particular court (e.g. a court in the Northern District of California) to preside over a dispute between a specific plaintiff and defendant~\\todocite. A court (sitting in a particular forum) has personal jurisdiction over a defendant only when that defendant has a relationship with the forum. We focus on a simplified version of the rule for federal personal jurisdiction, using the rule:\n ```text\n There is personal jurisdiction over a defendant in the state where the defendant is domiciled, or when (1) the defendant has sufficient contacts with the state, such that they have availed themselves of the privileges of the state and (2) the claim arises out of the nexus of the defendant's contacts with the state.\n ```\n Under this rule, there are two paths for a court have jurisdiction over a defendant: through domicile or through contacts.\n - **Domicile**: A defendant is domiciled in a state if they are a citizen of the state (i.e. they live in the state). Changing residency affects a change in citizenship.\n - **Contacts**:  Alternatively, a court may exercise jurisdiction over a defendant when that defendant has *sufficient contacts* with the court's forum, and the legal claims asserted arise from the \\textit{nexus} of the defendant's contacts with the state. In evaluating whether a set of contacts are sufficient, lawyers look at the extent to which the defendant interacted with the forum, and availed themselves of the benefits and privileges of the state's laws. Behavior which usually indicates sufficient contacts include: marketing in the forum or selling/shipping products into the forum. In assessing nexus, lawyers ask if the claims brought against the defendant arise from their contacts with the forum. In short: is the conduct being litigated involve the forum or its citizens in some capacity?"
+    },
+    "cuad_renewal_term": {
+        "summary": "Does the clause specify a renewal term?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Renewal Term\"."
+    },
+    "supply_chain_disclosure_disclosed_accountability": {
+        "summary": "Does the above statement disclose to what extent, if any, that the retail seller or manufacturer maintains internal accountability standards and procedures for employees or contractors failing to meet company standards regarding slavery and trafficking?",
+        "description": "This is a binary classification task in which the LLM must determine if a supply chain disclosure meets the following coding criteria.\n```text\nDoes the above statement disclose to what extent, if any, that the retail seller or manufacturer maintains internal accountability standards and procedures for employees or contractors failing to meet company standards regarding slavery and trafficking?\n```"
+    },
+    "learned_hands_divorce": {
+        "summary": "Classify if a user post implicates legal isssues related to divorce.",
+        "description": "This is a binary classification task in which the model must determine if a user's post discusses issues around filing for divorce, separation, or annulment, getting spousal support, splitting money and property, and following the court processes."
+    },
+    "cuad_insurance": {
+        "summary": "Is there a requirement for insurance that must be maintained by one party for the benefit of the counterparty?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Insurance\"."
+    },
+    "cuad_termination_for_convenience": {
+        "summary": "Does the clause specify that one party can terminate this contract without cause (solely by giving a notice and allowing a waiting period to expire)?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Termination For Convenience\"."
+    },
+    "cuad_warranty_duration": {
+        "summary": "Does the clause specify a  duration of any warranty against defects or errors in technology, products, or services provided under the contract?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Warranty Duration\"."
+    },
+    "supply_chain_disclosure_disclosed_audits": {
+        "summary": "Does the above statement disclose to what extent, if any, that the retail seller or manufacturer conducts audits of suppliers to evaluate supplier compliance with company standards for trafficking and slavery in supply chains? The disclosure shall specify if the verification was not an independent, unannounced audit.",
+        "description": "This is a binary classification task in which the LLM must determine if a supply chain disclosure meets the following coding criteria.\n```text\nDoes the above statement disclose to what extent, if any, that the retail seller or manufacturer conducts audits of suppliers to evaluate supplier compliance with company standards for trafficking and slavery in supply chains? The disclosure shall specify if the verification was not an independent, unannounced audit.\n```"
+    },
+    "contract_nli_return_of_confidential_information": {
+        "summary": "Identify if the clause provides that the Receiving Party shall destroy or return some Confidential Information upon the termination of Agreement.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "cuad_ip_ownership_assignment": {
+        "summary": "Does intellectual property created by one party become the property of the counterparty, either per the terms of the contract or upon the occurrence of certain events?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Ip Ownership Assignment\"."
+    },
+    "supply_chain_disclosure_best_practice_verification": {
+        "summary": "Does the above statement disclose whether the retail seller or manufacturer engages in verification and auditing as one practice, expresses that it may conduct an audit, or expressess that it is assessing supplier risks through a review of the US Dept. of Labor's List?",
+        "description": "This is a binary classification task in which the LLM must determine if a supply chain disclosure meets the following coding criteria.\n```text\nDoes the above statement disclose whether the retail seller or manufacturer engages in verification and auditing as one practice, expresses that it may conduct an audit, or expressess that it is assessing supplier risks through a review of the US Dept. of Labor's List?\n```"
+    },
+    "sara_entailment": {
+        "summary": "Determine whether the following statements are entailed under the statute.",
+        "description": "The StAtutory Reasoning Assessment (SARA) dataset tests the ability to reason about summaries of facts and statutes, in the context of US federal tax law. SARA contains a set of statutes, and summaries of facts (cases) paired with a question or an entailment prompt. An entailment prompt asks about a specific section of the SARA statutes. A question asks how much tax one of the protagonists in the case owes."
+    },
+    "ssla_individual_defendants": {
+        "summary": "Extract the identities of individual defendants from excerpts of securities class action complaints.",
+        "description": "This task requires the LLM to extract the identities of individual defendants from excerpts of securities class action complaints.\nLLM outputs should be evaluated by comparing the extracted names to the ground truth. We recommend using `fuzz.partial_ratio` from the [fuzz](https://github.com/seatgeek/thefuzz) library, with a similarity score >= 80 constituting a correct answer (if a plaintiff is mentioned)."
+    },
+    "cuad_no-solicit_of_customers": {
+        "summary": "Does the clause restrict a party from contracting or soliciting customers or partners of the counterparty, whether during the contract or after the contract ends (or both)?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"No-Solicit Of Customers\"."
+    },
+    "maud_fiduciary_exception:__board_determination_standard": {
+        "summary": "Read the following merger agreement and answer: under what circumstances could the Board take actions on a different acquisition proposal notwithstanding the no-shop provision?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "cuad_non-compete": {
+        "summary": "Does the clause restrict the ability of a party to compete with the counterparty or operate in a certain geography or business or technology sector?",
+        "description": "This is a binary classification task in which the model must determine if a contractual clause falls under the category of \"Non-Compete\"."
+    },
+    "contract_nli_permissible_development_of_similar_information": {
+        "summary": "Identify if the clause provides that the Receiving Party may independently develop information similar to Confidential Information.",
+        "description": "This task is a subset of ContractNLI, and consists of determinining whether a clause from an NDA has a particular legal effect."
+    },
+    "citation_prediction_classification": {
+        "summary": "Predict if a sentence is supported by a case.",
+        "description": "This task evaluates the extent to which a LLM can determine if a case is supportive of a particular sentence."
+    },
+    "maud_includes_\"consistent_with_past_practice\"": {
+        "summary": "Read the following merger agreement and answer: does the wording of the Efforts Covenant clause include \u201cconsistent with past practice\u201d?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    },
+    "maud_liability_standard_for_no-shop_breach_by_target_non-d&o_representatives": {
+        "summary": "Read the following merger agreement and answer: what is the liability standard for no-shop breach by Target Non-D&O Representatives?",
+        "description": "This is a multiple-choice task in which the model must select the answer that best characterizes the merger agreement."
+    }
+}
